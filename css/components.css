@@ -1,0 +1,203 @@
+/* Botón de decisión */
+.choice-btn {
+  display: block;
+  width: 100%;
+  padding: 1.1rem 1.75rem;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: var(--size-md);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition:
+    background var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-fast),
+    box-shadow var(--transition-base);
+}
+
+/* Efecto shimmer al fondo */
+.choice-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.04) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+/* Triángulo decorativo izquierda */
+.choice-btn::after {
+  content: '❧';
+  position: absolute;
+  left: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%) scale(0.8);
+  opacity: 0;
+  color: var(--color-primary);
+  font-style: normal;
+  transition:
+    opacity var(--transition-base),
+    transform var(--transition-base);
+}
+
+/* Estado: hover */
+.choice-btn:hover {
+  background: var(--color-surface-alt);
+  border-color: var(--color-primary);
+  border-left-color: var(--color-accent);
+  border-left-width: 4px;
+  color: var(--color-text-emphasis);
+  transform: translateX(6px);
+  box-shadow: var(--shadow-glow), inset 0 0 20px rgba(255,255,255,0.02);
+}
+
+.choice-btn:hover::before {
+  transform: translateX(100%);
+}
+
+.choice-btn:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+  left: -0.5rem;
+}
+
+/* Estado: active */
+.choice-btn:active {
+  transform: translateX(4px) scale(0.99);
+  box-shadow: none;
+  background: var(--color-surface);
+}
+
+/* Estado: focus-visible (teclado) */
+.choice-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-color: var(--color-primary);
+}
+
+/* Botón CTA */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background: var(--color-primary);
+  color: var(--color-background);
+  font-family: var(--font-ui);
+  font-size: var(--size-sm);
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.cta-btn:hover {
+  background: var(--color-accent);
+  color: var(--color-background);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 169, 110, 0.35);
+}
+
+.cta-btn:active {
+  transform: translateY(0);
+}
+
+.cta-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* Card de personajes */
+.characters-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.characters-card p {
+  font-size: var(--size-base);
+  line-height: 2;
+}
+
+/* Etiqueta de estado del final */
+.ending-badge {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: var(--size-xs);
+  font-weight: 300;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  padding: 0.3rem 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Separador ornamental */
+.ornament {
+  text-align: center;
+  font-family: var(--font-script);
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  opacity: 0.5;
+  padding: 0.5rem 0;
+  letter-spacing: 0.2em;
+}
+
+/* Cita/diálogo destacado */
+.dialogue {
+  border-left: 2px solid var(--color-primary);
+  padding-left: 1.5rem;
+  margin-left: 0;
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+/*Nota de pie*/
+.story-hint {
+  font-family: var(--font-ui);
+  font-size: var(--size-xs);
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  opacity: 0.7;
+  padding-top: 0.5rem;
+}
+
+/*Link de regreso */
+.back-link {
+  font-family: var(--font-ui);
+  font-size: var(--size-xs);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.back-link:hover {
+  color: var(--color-primary);
+}

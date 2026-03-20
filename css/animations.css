@@ -1,0 +1,124 @@
+/*Entrada de página*/
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*Reveal del índice*/
+@keyframes indexReveal {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*Pulso suave del botón CTA*/
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(201, 169, 110, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(201, 169, 110, 0.08);
+  }
+}
+
+/*Parpadeo del cursor de texto*/
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/*Aparición escalonada de párrafos*/
+.story-content p {
+  animation: pageEnter 0.6s ease both;
+}
+
+.story-content p:nth-child(1) { animation-delay: 0.05s; }
+.story-content p:nth-child(2) { animation-delay: 0.15s; }
+.story-content p:nth-child(3) { animation-delay: 0.25s; }
+.story-content p:nth-child(4) { animation-delay: 0.35s; }
+.story-content p:nth-child(5) { animation-delay: 0.45s; }
+.story-content p:nth-child(6) { animation-delay: 0.55s; }
+.story-content p:nth-child(7) { animation-delay: 0.65s; }
+.story-content p:nth-child(8) { animation-delay: 0.75s; }
+
+/*Aparición de botones de elección*/
+.choices-panel .choice-btn {
+  animation: pageEnter 0.5s ease both;
+}
+.choices-panel .choice-btn:nth-child(1) { animation-delay: 0.5s; }
+.choices-panel .choice-btn:nth-child(2) { animation-delay: 0.65s; }
+
+/*Brillo de título en portada*/
+@keyframes titleGlow {
+  0%, 100% {
+    text-shadow: 0 0 40px rgba(201, 169, 110, 0.0);
+  }
+  50% {
+    text-shadow: 0 0 60px rgba(201, 169, 110, 0.15), 0 0 120px rgba(201, 169, 110, 0.05);
+  }
+}
+
+.index-title {
+  animation: titleGlow 5s ease-in-out infinite, indexReveal 1.2s ease both;
+}
+
+/*Línea de separación animada*/
+@keyframes lineExpand {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+.hero::after {
+  animation: lineExpand 1s ease 0.4s both;
+}
+
+/*Fade del badge de final*/
+@keyframes badgeIn {
+  from {
+    opacity: 0;
+    letter-spacing: 0.8em;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.35em;
+  }
+}
+
+.ending-badge {
+  animation: badgeIn 0.8s ease 0.2s both;
+}
+
+/*Imagen de historia: fade desde abajo*/
+@keyframes imageReveal {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.story-image-wrapper {
+  animation: imageReveal 0.9s ease 0.2s both;
+}
+
+/*Reducción de movimiento (accesibilidad)*/
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

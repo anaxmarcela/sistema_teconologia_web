@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400&family=Dancing+Script:wght@600&display=swap');
+
+/* Estado 1: INICIO */
+:root {
+  --color-primary:        #c9a96e;
+  --color-secondary:      #8b6f47;
+  --color-accent:         #e8d5b0;
+  --color-background:     #0d0b08;
+  --color-surface:        #1a1610;
+  --color-surface-alt:    #221d15;
+  --color-text:           #e8ddd0;
+  --color-text-muted:     #9a8e7e;
+  --color-text-emphasis:  #f5ead8;
+  --color-border:         #3a3020;
+  --color-overlay:        rgba(13, 11, 8, 0.85);
+
+  --font-display:   'Cormorant Garamond', Georgia, serif;
+  --font-ui:        'Josefin Sans', 'Trebuchet MS', sans-serif;
+  --font-script:    'Dancing Script', cursive;
+
+  --size-xs:   0.75rem;
+  --size-sm:   0.875rem;
+  --size-base: 1rem;
+  --size-md:   1.125rem;
+  --size-lg:   1.5rem;
+  --size-xl:   2rem;
+  --size-2xl:  2.75rem;
+  --size-3xl:  4rem;
+
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  16px;
+
+  --shadow-soft:  0 4px 24px rgba(0,0,0,0.5);
+  --shadow-glow:  0 0 30px rgba(201, 169, 110, 0.15);
+  --shadow-card:  0 8px 40px rgba(0,0,0,0.6);
+
+  --transition-fast:   0.2s ease;
+  --transition-base:   0.35s ease;
+  --transition-slow:   0.6s ease;
+
+  --page-state: 'inicio';
+}
+
+/*  Estado 2: DECISION */
+.state-decision {
+  --color-primary:      #7eb8c9;
+  --color-secondary:    #4a8fa3;
+  --color-accent:       #b8dce8;
+  --color-background:   #080d10;
+  --color-surface:      #101820;
+  --color-surface-alt:  #162030;
+  --color-text:         #d4e8f0;
+  --color-text-muted:   #7a9dab;
+  --color-text-emphasis:#e8f5fa;
+  --color-border:       #1e3040;
+  --color-overlay:      rgba(8, 13, 16, 0.88);
+  --shadow-glow:        0 0 30px rgba(126, 184, 201, 0.12);
+}
+
+/*  Estado 3A: FINAL BUENO */
+.state-final-good {
+  --color-primary:      #b8d4a0;
+  --color-secondary:    #7aab5e;
+  --color-accent:       #d8ecc8;
+  --color-background:   #080c08;
+  --color-surface:      #101810;
+  --color-surface-alt:  #182018;
+  --color-text:         #d4e8cc;
+  --color-text-muted:   #7a9d6a;
+  --color-text-emphasis:#e8f5e0;
+  --color-border:       #1e3018;
+  --color-overlay:      rgba(8, 12, 8, 0.88);
+  --shadow-glow:        0 0 30px rgba(184, 212, 160, 0.12);
+}
+
+/*  Estado 3B: FINAL NEUTRO  */
+.state-final-neutral {
+  --color-primary:      #c4b89a;
+  --color-secondary:    #9a8c70;
+  --color-accent:       #ddd4bc;
+  --color-background:   #0c0b09;
+  --color-surface:      #181610;
+  --color-surface-alt:  #201e18;
+  --color-text:         #e0d8c8;
+  --color-text-muted:   #9a9080;
+  --color-text-emphasis:#f0ebe0;
+  --color-border:       #302a1e;
+  --color-overlay:      rgba(12, 11, 9, 0.88);
+  --shadow-glow:        0 0 30px rgba(196, 184, 154, 0.10);
+}
+
+/*  Estado 3C: FINAL MALO  */
+.state-final-bad {
+  --color-primary:      #c98888;
+  --color-secondary:    #a05050;
+  --color-accent:       #e8c0c0;
+  --color-background:   #0d0808;
+  --color-surface:      #1a1010;
+  --color-surface-alt:  #221515;
+  --color-text:         #e8d0d0;
+  --color-text-muted:   #9a7070;
+  --color-text-emphasis:#f5e0e0;
+  --color-border:       #3a2020;
+  --color-overlay:      rgba(13, 8, 8, 0.88);
+  --shadow-glow:        0 0 30px rgba(201, 136, 136, 0.12);
+}
